@@ -1,0 +1,29 @@
+<div class="jumbotron pb-3">
+  <div class="container">
+    <h1 class="display-3 text-capitalize">{{tags.albertReal}}</h1>
+    <p>
+      {{tags.intro}}.
+    </p>
+    <p>
+      {{tags.moreInfo}}: <a href="mailto:{{tags.contactMail}}?Subject={{tags.contactMailSubject}}" target="_top">{{tags.contactMail}}</a>
+    </p>
+  </div> <!-- /container -->
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col" *ngIf="targetCard">
+      <h2 class="text-capitalize">{{tags.nextTarget}}</h2>
+      <app-card
+        [card]="targetCard">
+      </app-card>
+    </div>
+
+    <div class="col" *ngFor="let card of arrCards">
+      <h2 class="text-capitalize">{{tags.lastUpdates}}</h2>
+      <app-card
+        [card]="card">
+      </app-card>
+    </div>
+  </div>
+</div> <!-- /container -->

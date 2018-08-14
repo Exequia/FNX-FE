@@ -44,7 +44,14 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
-            }
+            },
+			"es": {
+			  "aot": true,
+			  "outputPath": "dist/FNX-FE",
+			  "i18nFile": "src/locale/messages.es.xlf",
+			  "i18nFormat": "xlf",
+			  "i18nLocale": "es"
+			}
           }
         },
         "serve": {
@@ -55,7 +62,10 @@
           "configurations": {
             "production": {
               "browserTarget": "FNX-FE:build:production"
-            }
+            },
+			"es": {
+			  "browserTarget": "FNX-FE:build:es"
+			}
           }
         },
         "extract-i18n": {
