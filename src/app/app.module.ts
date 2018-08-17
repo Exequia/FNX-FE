@@ -4,16 +4,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 
+/* SERVICES */
+import { MessageService } from './message/services/message.service';
+import { UsersService } from './services/users.service';
+
+/* COMPONENTS */
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { HomeComponent } from './home/home.component';
 import { MessageComponent } from './message/message.component';
-
-// import { registerLocaleData } from '@angular/common';
-// import localeEs from '@angular/common/locales/es';
-
-// // the second parameter 'ES' is optional
-// registerLocaleData(localeEs, 'ES');
 
 @NgModule({
   declarations: [
@@ -28,7 +27,10 @@ import { MessageComponent } from './message/message.component';
     ReactiveFormsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    MessageService,
+    UsersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

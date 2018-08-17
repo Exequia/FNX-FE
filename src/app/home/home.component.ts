@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     this.tags.moreInfo = 'Si quieres más información, puedes enviar un mail a';
     this.tags.contactMail = 'real.estepa@gmail.com';
     this.tags.contactMailSubject = 'Contacto%20a%20través%20de%20la%20web';
-    this.tags.nextTarget = 'próximo Objetivo';
+    this.tags.nextTarget = 'próximo objetivo';
     this.tags.lastUpdates = 'últimas actualizaciones';
 
     this.emailData.address = 'real.estepa@gmail.com';

@@ -21,6 +21,8 @@ export class AppComponent implements OnInit {
   mailInvalid;
   passInvalid;
   loading : boolean = false;
+  /* VARS */
+
 
   constructor(private fb: FormBuilder, private element : ElementRef){
     this.loginForm = this.fb.group({
