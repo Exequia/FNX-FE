@@ -14,7 +14,11 @@ export class MessageService {
     this.messages.push(message);
   }
  
-  clear() {
+  clearAll() {
     this.messages = [];
+  }
+ 
+  clear(index:number) {
+    this.messages.splice(index, 1);
   }
 }

@@ -1,7 +1,10 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IloginFrm } from './models/forms';
-import { Iusr } from './models/user';
+import { Iuser } from './models/user';
+import { Imessage } from './message/models/messages';
+
+import { UsersService } from './services/users.service';
 
 declare var jquery:any;
 declare var $ :any;
@@ -17,14 +20,14 @@ export class AppComponent implements OnInit {
   tags : any = {};
   usrLogged : boolean = false;
   loginForm : FormGroup;
-  usr : Iusr;
+  user : Iuser;
   mailInvalid;
   passInvalid;
   loading : boolean = false;
   /* VARS */
 
 
-  constructor(private fb: FormBuilder, private element : ElementRef){
+  constructor(private fb: FormBuilder, private userService: UsersService, private element : ElementRef){
     this.loginForm = this.fb.group({
       email: ['', [Validators.required,Validators.email] ],
       pass: ['', Validators.required ],
@@ -81,33 +84,33 @@ export class AppComponent implements OnInit {
     this.loading = true;
     let valid : boolean = true;
 
-    if (login.email != 'fnx@fnx.com') {
+    if (!login.email) {
       valid = false;
       let mail = this.element.nativeElement.querySelector('#email');
       if (mail){
-        this.loginForm.patchValue({email:''});
         this.mailInvalid = this.tags.mailInvalid;
+      } else {
+        this.mailInvalid = undefined;
       }
     }
 
-    if (login.pass != 'fnxFire') {
+    if (!login.pass) {
       valid = false;
       let pass = this.element.nativeElement.querySelector('#pass');
       if (pass){
-        this.loginForm.patchValue({pass:''});
         this.passInvalid = this.tags.passInvalid;
+      } else {
+        this.passInvalid = undefined;
       }
     }
 
     if (valid) {
-      this.mailInvalid = undefined;
-      this.passInvalid = undefined;
-      this.usr = {
-        id: 0,
-        name: 'Fénix',
-        surname1: 'Fire',
-        surname2: '',
-        role: 'admin'};
+
+      this.userService.login(login.email, login.pass)
+      .subscribe(user => {
+        this.user = user;
+      });
+      
     }
 
     this.loading = false;

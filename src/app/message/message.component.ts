@@ -16,8 +16,8 @@ export class MessageComponent implements OnInit {
   }
 
   /* FUNCTIONS */
-  closeMsg() {
-    this.messageService.clear();
+  closeMsg(index:number) {
+    this.messageService.clear(index);
   }
   /* FUNCTIONS */
 }

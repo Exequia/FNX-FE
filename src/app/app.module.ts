@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { AppRoutingModule } from './app-routing.module';
 
-/* SERVICES */
-import { MessageService } from './message/services/message.service';
-import { UsersService } from './services/users.service';
+// /* SERVICES */
+// import { MessageService } from './message/services/message.service';
+// import { UsersService } from './services/users.service';
 
 /* COMPONENTS */
 import { AppComponent } from './app.component';
@@ -25,11 +26,12 @@ import { MessageComponent } from './message/message.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule,
   ],
   providers: [
-    MessageService,
-    UsersService
+    // MessageService,
+    // UsersService
   ],
   bootstrap: [AppComponent]
 })
