@@ -109,11 +109,18 @@ export class AppComponent implements OnInit {
       this.userService.login(login.email, login.pass)
       .subscribe(user => {
         this.user = user;
+        this.loading = false;
       });
-      
-    }
 
+    }
+  }
+
+  invokeLogout () {
+    
+    this.loading = true;
+    this.user = this.userService.logout();
     this.loading = false;
+
   }
 
   //FUNCTIONS
@@ -121,6 +128,12 @@ export class AppComponent implements OnInit {
     if (this.loginForm.status == 'VALID') {
       let login = this.loginForm.value;
       this.invokeLogin(login);
+    }
+  }
+
+  logout() {
+    if (this.user) {
+      this.invokeLogout();
     }
   }
 }

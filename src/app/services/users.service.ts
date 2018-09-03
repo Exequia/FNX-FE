@@ -57,8 +57,8 @@ export class UsersService {
     };
   }
 
-  /*
-  * Se consultan los datos del servicio de login con los parámetros.
+  /**
+  * Call to the backend service to login User and return and error alert or copy of data user
   *  
   */
   login(email:string, pass:string) {
@@ -96,5 +96,17 @@ export class UsersService {
         this.handleError<any>('loggin')
       )
     );
+  }
+
+
+  /**
+  * Delete the user data info
+  *  
+  */
+  logout() {
+
+    this.messageService.clearAll();
+    this.user = undefined;
+    return this.user;
   }
 }
