@@ -38,6 +38,7 @@ export class AppComponent implements OnInit {
   get pass() { return this.loginForm.get('pass'); }
 
   ngOnInit() {
+    this.tags.initApp = 'inicio de la aplicación';
     this.tags.home = 'inicio';
     this.tags.email = 'email';
     this.tags.pass = 'contraseña';
@@ -49,6 +50,11 @@ export class AppComponent implements OnInit {
     this.tags.invalidMail = 'el formato del email introducido no es correcto';
     this.tags.mailInvalid = 'el mail introducido no es válido';
     this.tags.passInvalid = 'la contraseña introducida no es válida';
+
+    this.tags.experience = 'experiencia';
+    this.tags.professional = 'profesional';
+    this.tags.downloadCV = 'descargar CV';
+    this.tags.github = 'github';
 
 
     // $(function () {

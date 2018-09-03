@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'; 
 
 import { AppRoutingModule } from './app-routing.module';
+import { ExperienceModule } from './experience/experience.module';
 
 // /* SERVICES */
 // import { MessageService } from './message/services/message.service';
@@ -28,6 +29,7 @@ import { MessageComponent } from './message/message.component';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    ExperienceModule,
   ],
   providers: [
     // MessageService,

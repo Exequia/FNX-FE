@@ -19,9 +19,7 @@ export class UsersService {
 
   private user : Iuser;
 
-  constructor(
-    private http: HttpClient,
-    private messageService: MessageService) { }
+  constructor(private http: HttpClient, private messageService: MessageService) { }
 
   /** Log a HeroService message with the MessageService */
   private log(message: Imessage) {
