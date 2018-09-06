@@ -1,3 +1,20 @@
-<p>
-  company works!
-</p>
+<div class="row">
+  <div class="col">
+
+    <div class="timeline" *ngIf="jobs">
+      <div class="container" *ngFor="let job of jobs; let odd=odd" [ngClass]="odd ? 'right' : 'left'">
+        <div class="content">
+          <h2>2017</h2>
+          <pre>{{job | json}}</pre>
+        </div>
+      </div>
+<!--       <div class="container right">
+        <div class="content">
+          <h2>2016</h2>
+          <p>Lorem ipsum..</p>
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+</div>

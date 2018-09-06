@@ -52,6 +52,7 @@ export class AppComponent implements OnInit {
     this.tags.passInvalid = 'la contraseña introducida no es válida';
 
     this.tags.experience = 'experiencia';
+    this.tags.studies = 'estudios';
     this.tags.professional = 'profesional';
     this.tags.downloadCV = 'descargar CV';
     this.tags.github = 'github';

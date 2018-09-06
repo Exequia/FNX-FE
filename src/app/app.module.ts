@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ExperienceModule } from './experience/experience.module';
+import { StudiesModule } from './studies/studies.module';
 
 // /* SERVICES */
 // import { MessageService } from './message/services/message.service';
@@ -30,6 +31,7 @@ import { MessageComponent } from './message/message.component';
     HttpClientModule,
     AppRoutingModule,
     ExperienceModule,
+    StudiesModule
   ],
   providers: [
     // MessageService,
