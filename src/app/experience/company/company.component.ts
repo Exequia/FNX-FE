@@ -22,6 +22,11 @@ export class CompanyComponent implements OnInit {
     'name': 'Java'
   };
 
+  scrumJava : ISkill = {
+    'id': 1,
+    'name': 'Scrum'
+  };
+
   skillJavaExpirience : ISkillExpirience = {
     'skill': this.skillJava,
     // 'expiriencies'?: Array<ItimeExpirience>;
@@ -29,12 +34,19 @@ export class CompanyComponent implements OnInit {
     'domain': Domain.getDomain(2595000 * 13)
   }
 
+  skillScrumExpirience : ISkillExpirience = {
+    'skill': this.scrumJava,
+    // 'expiriencies'?: Array<ItimeExpirience>;
+    'time': 2592000,
+    'domain': Domain.getDomain(2592000)
+  }
+
   skillsExpirienceData0 : Array<ISkillExpirience> = [];
 
   jobData0 : Ijob = {
     'id': 0,
     'company': 'Deloitte',
-    'companyURL': 'www.google.es',
+    'companyURL': 'https://www.google.es/',
     'dateInit': new Date(2018,3,21),
     'dateEnd': new Date(),
     'role':  'team lead',
@@ -46,7 +58,11 @@ export class CompanyComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.tags.as = 'como';
+    this.tags.in = 'en';
+
     this.skillsExpirienceData0.push(this.skillJavaExpirience);
+    this.skillsExpirienceData0.push(this.skillScrumExpirience);
     this.jobsData.push(this.jobData0);
     this.jobsData.push(this.jobData0);
     this.jobs = this.jobsData;

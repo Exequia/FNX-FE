@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { CompanyComponent } from './company/company.component';
 import { SkillsComponent } from './skills/skills.component';
 import { DomainComponent } from './domain/domain.component';
+import { SkillBadgeComponent } from './skill-badge/skill-badge.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { DomainComponent } from './domain/domain.component';
     HomeComponent,
     CompanyComponent,
     SkillsComponent,
-    DomainComponent
+    DomainComponent,
+    SkillBadgeComponent
   ]
 })
 export class ExperienceModule { }

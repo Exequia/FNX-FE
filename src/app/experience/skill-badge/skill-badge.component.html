@@ -1,0 +1,12 @@
+<span class="badge badge-pill mr-2" *ngIf="skill" 
+  [ngClass]="skill.domain.domain === 'master' ? 'badge-dark' : 
+             skill.domain.domain === 'high'   ? 'badge-success' :
+             skill.domain.domain === 'medium' ? 'badge-primary' :
+             skill.domain.domain === 'low'    ? 'badge-warning' : 'badge-danger'"
+  [title]="skill.domain.timeExpirience | json">
+  {{skill.skill.name}}
+</span>
+
+<span class="badge badge-pill badge-primary mr-2" *ngIf="skill" [title]="skill.domain.timeExpirience | json">
+  {{skill.skill.name}}
+</span>
