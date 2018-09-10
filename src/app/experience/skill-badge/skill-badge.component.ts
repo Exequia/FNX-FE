@@ -18,4 +18,12 @@ export class SkillBadgeComponent implements OnInit {
   ngOnInit() {
   }
 
+  markSkill() {
+    this.skill.selected = true;
+  }
+
+  unMarkSkill(skill : ISkill) {
+    this.skill.selected = false;
+  }
+
 }

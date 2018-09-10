@@ -14,8 +14,9 @@
             {{job.description}}
           </p>
           <p>
-            <app-skill-badge *ngFor="let skill of job.skills"
-            [skill]="skill">
+            <app-skill-badge 
+              *ngFor="let skill of job.skills"
+              [skill]="skill">
             </app-skill-badge>
           </p>
         </div>

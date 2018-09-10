@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CompanyComponent } from './company.component';
+import { SkillBadgeComponent } from '../skill-badge/skill-badge.component';
 
 describe('CompanyComponent', () => {
   let component: CompanyComponent;
@@ -8,7 +9,7 @@ describe('CompanyComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CompanyComponent ]
+      declarations: [ CompanyComponent, SkillBadgeComponent ]
     })
     .compileComponents();
   }));

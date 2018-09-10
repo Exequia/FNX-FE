@@ -10,6 +10,7 @@ export interface Ijob {
 }
 
 export interface ISkillExpirience {
+  'id': number;
   'skill': ISkill;
   'expiriencies'?: Array<ItimeExpirience>;
   'time': number;
@@ -19,6 +20,7 @@ export interface ISkillExpirience {
 export interface ISkill {
   'id': number;
   'name': string;
+  'selected'?: boolean;
 }
 
 export interface ItimeExpirience {

@@ -6,6 +6,7 @@ import { ExperienceRoutingModule } from '../experience-routing.module';
 import { CompanyComponent } from '../company/company.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { DomainComponent } from '../domain/domain.component';
+import { SkillBadgeComponent } from '../skill-badge/skill-badge.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -21,7 +22,8 @@ describe('HomeComponent', () => {
         HomeComponent,
         CompanyComponent,
         SkillsComponent,
-        DomainComponent
+        DomainComponent,
+        SkillBadgeComponent
       ]
     })
     .compileComponents();

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 
 import { Ijob, ISkillExpirience, ISkill, Domain } from '../models/experience'
 
@@ -28,6 +28,7 @@ export class CompanyComponent implements OnInit {
   };
 
   skillJavaExpirience : ISkillExpirience = {
+    'id': 0,
     'skill': this.skillJava,
     // 'expiriencies'?: Array<ItimeExpirience>;
     'time': 2592000,
@@ -35,6 +36,7 @@ export class CompanyComponent implements OnInit {
   }
 
   skillScrumExpirience : ISkillExpirience = {
+    'id': 1,
     'skill': this.scrumJava,
     // 'expiriencies'?: Array<ItimeExpirience>;
     'time': 2592000,
