@@ -1,38 +1,27 @@
-export interface Ijob {
-  id: number
-  company: string
-  companyURL: string
-  customer: string
-  customerURL: string
-  dateInit: Date
-  dateEnd: Date
-  role: string
-  description: string
-  skills: Array<ISkillExpirience>
-}
+import { Injectable } from '@angular/core'
+import { FilesService } from '../../services/files/files.service'
+import { Ijob } from '../models/experience'
 
-export interface ISkillExpirience {
-  id: number
-  skill: ISkill
-  expiriencies?: Array<ItimeExpirience>
-  time: number
-  domain: Domain
-}
+@Injectable({
+  providedIn: 'root',
+})
+export class ExperienceService {
+  jobExperiencies: Array<Ijob>
 
-export interface ISkill {
-  id: number
-  name: string
-  selected?: boolean
-}
+  constructor(private fileService: FilesService) {}
 
-export interface ItimeExpirience {
-  dateInit: Date
-  dateEnd: Date
-  time: number
-}
+  readJobExperiencies() {
+    return this.fileService.readFile('./assets/files/jobExperiencies.json')
+  }
 
-export class Domain {
-  static getDomain(expirienceTime: number): any {
+  async getExperiencies(): Promise<Array<Ijob>> {
+    if (!this.jobExperiencies) {
+      this.jobExperiencies = <Array<Ijob>>await this.readJobExperiencies().toPromise()
+    }
+    return this.jobExperiencies
+  }
+
+  getDomain(expirienceTime: number): any {
     let timeStructure = {
       year: 31536000,
       month: 2592000,
@@ -78,6 +67,4 @@ export class Domain {
 
     return expirience
   }
-
-  getDomainLevel() {}
 }

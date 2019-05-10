@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "name": "java"
+  },
+  {
+    "id": 1,
+    "skill": "PHP"
+  },
+  {
+    "id": 2,
+    "skill": ".NET"
+  },
+  {
+    "id": 3,
+    "skill": "Oracle"
+  },
+  {
+    "id": 4,
+    "skill": "SQLServer"
+  }
+]
