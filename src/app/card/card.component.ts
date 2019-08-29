@@ -7,15 +7,13 @@ import { Icard } from './models/card';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+  // VARS
+  @Input() card: Icard;
+  tags: any = {};
 
-  //VARS
-  @Input() card : Icard;
-  tags : any = {};
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-    this.tags.details = 'detalles'
+    this.tags.details = 'detalles';
   }
-
 }

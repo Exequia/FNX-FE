@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ISkill } from '../models/experience'
+import { ISkill } from '../models/experience';
 
 @Component({
   selector: 'app-skill-badge',
@@ -8,22 +8,19 @@ import { ISkill } from '../models/experience'
   styleUrls: ['./skill-badge.component.css']
 })
 export class SkillBadgeComponent implements OnInit {
-
   /* VARS */
-  @Input() skill : ISkill;
+  @Input() skill: ISkill;
   /* VARS */
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   markSkill() {
     this.skill.selected = true;
   }
 
-  unMarkSkill(skill : ISkill) {
+  unMarkSkill(skill: ISkill) {
     this.skill.selected = false;
   }
-
 }

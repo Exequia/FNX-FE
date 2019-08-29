@@ -8,15 +8,12 @@ import { MessageService } from './services/message.service';
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements OnInit {
+  constructor(public messageService: MessageService) {}
 
-  constructor(public messageService: MessageService) { }
-
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   /* FUNCTIONS */
-  closeMsg(index:number) {
+  closeMsg(index: number) {
     this.messageService.clear(index);
   }
   /* FUNCTIONS */

@@ -24,7 +24,7 @@ export class ExperienceService {
   }
 
   getDomain(expirienceTime: number): any {
-    let timeStructure = {
+    const timeStructure = {
       year: 31536000,
       month: 2592000
       // 'week': 604800,
@@ -34,7 +34,7 @@ export class ExperienceService {
       // 'second': 1
     };
 
-    let domainLevel = {
+    const domainLevel = {
       learning: 'learning',
       low: 'low',
       medium: 'medium',
@@ -42,8 +42,8 @@ export class ExperienceService {
       master: 'master'
     };
 
-    let expirience: any = {};
-    let timeExpirience = {};
+    const expirience: any = {};
+    const timeExpirience = {};
 
     expirience.timeExpirience = timeExpirience;
 

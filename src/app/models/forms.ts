@@ -1,4 +1,4 @@
 export interface IloginFrm {
-  email:string;
-  pass:string;
+  email: string;
+  pass: string;
 }
