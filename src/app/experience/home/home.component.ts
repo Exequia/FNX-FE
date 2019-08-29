@@ -8,15 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   /* VARS */
-  tags : any = {};
   /* VARS */
 
   constructor() { }
 
   ngOnInit() {
-    this.tags.companies = 'compañías';
-    this.tags.skills = 'habilidades';
-    this.tags.domain = 'dominio';
   }
 
 }

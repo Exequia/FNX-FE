@@ -7,11 +7,25 @@ import { CompanyComponent } from './company/company.component';
 import { SkillsComponent } from './skills/skills.component';
 import { DomainComponent } from './domain/domain.component';
 import { SkillBadgeComponent } from './skill-badge/skill-badge.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
+
 
 @NgModule({
   imports: [
     CommonModule,
-    ExperienceRoutingModule
+    ExperienceRoutingModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   declarations: [
     HomeComponent,

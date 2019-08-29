@@ -1,70 +1,72 @@
-import { Injectable } from '@angular/core'
-import { FilesService } from '../../services/files/files.service'
-import { Ijob } from '../models/experience'
+import { Injectable } from '@angular/core';
+import { FilesService } from '../../services/files/files.service';
+import { Ijob } from '../models/experience';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ExperienceService {
-  jobExperiencies: Array<Ijob>
+  jobExperiencies: Array<Ijob>;
 
   constructor(private fileService: FilesService) {}
 
   readJobExperiencies() {
-    return this.fileService.readFile('./assets/files/jobExperiencies.json')
+    return this.fileService.readFile('./assets/files/jobExperiencies.json');
   }
 
   async getExperiencies(): Promise<Array<Ijob>> {
     if (!this.jobExperiencies) {
-      this.jobExperiencies = <Array<Ijob>>await this.readJobExperiencies().toPromise()
+      this.jobExperiencies = <Array<Ijob>>(
+        await this.readJobExperiencies().toPromise()
+      );
     }
-    return this.jobExperiencies
+    return this.jobExperiencies;
   }
 
   getDomain(expirienceTime: number): any {
     let timeStructure = {
       year: 31536000,
-      month: 2592000,
+      month: 2592000
       // 'week': 604800,
       // 'day': 86400,
       // 'hour': 3600,
       // 'minute': 60,
       // 'second': 1
-    }
+    };
 
     let domainLevel = {
       learning: 'learning',
       low: 'low',
       medium: 'medium',
       high: 'high',
-      master: 'master',
-    }
+      master: 'master'
+    };
 
-    let expirience: any = {}
-    let timeExpirience = {}
+    let expirience: any = {};
+    let timeExpirience = {};
 
-    expirience.timeExpirience = timeExpirience
+    expirience.timeExpirience = timeExpirience;
 
     if (expirienceTime > timeStructure.year * 2) {
-      expirience.domain = domainLevel.master
+      expirience.domain = domainLevel.master;
     } else if (expirienceTime >= timeStructure.year) {
-      expirience.domain = domainLevel.high
+      expirience.domain = domainLevel.high;
     } else if (expirienceTime >= timeStructure.month * 6) {
-      expirience.domain = domainLevel.medium
+      expirience.domain = domainLevel.medium;
     } else if (expirienceTime >= timeStructure.month) {
-      expirience.domain = domainLevel.low
+      expirience.domain = domainLevel.low;
     } else {
-      expirience.domain = domainLevel.learning
+      expirience.domain = domainLevel.learning;
     }
 
     Object.keys(timeStructure).forEach(function(time) {
       timeExpirience[time] =
         time === 'month'
           ? Math.ceil(expirienceTime / timeStructure[time])
-          : Math.floor(expirienceTime / timeStructure[time])
-      expirienceTime -= timeExpirience[time] * timeStructure[time]
-    })
+          : Math.floor(expirienceTime / timeStructure[time]);
+      expirienceTime -= timeExpirience[time] * timeStructure[time];
+    });
 
-    return expirience
+    return expirience;
   }
 }

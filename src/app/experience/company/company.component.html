@@ -6,12 +6,10 @@
         *ngFor="let job of jobs; let odd = odd"
         [ngClass]="odd ? 'right' : 'left'"
       >
-        -->
-        <!-- <div class="container right" *ngFor="let job of jobs"> -->
         <div class="content">
-          <h3>{{ job.dateInit | date: 'MMM-yyyy' }} - {{ job.dateEnd | date: 'MMM-yyyy' }}</h3>
+          <h3>{{ job.dateInit | date: 'MMM-yyyy' }} - {{ getEndDate(job.dateEnd) | date: 'MMM-yyyy' }}</h3>
           <h4 class="text-capitalize">
-            {{ tags.as }} {{ job.role }} {{ tags.in }}
+              {{ 'experience.company.role' | translate:{'role':job.role} }}
             <a
               [href]="job.companyURL"
               [title]="job.company + ' website'"
@@ -30,5 +28,4 @@
       </div>
     </div>
   </div>
-  <pre>jobs: {{ jobs | json }}</pre>
 </div>

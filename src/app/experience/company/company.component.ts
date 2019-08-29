@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core'
-
-import { ExperienceService } from '../services/experience.service'
-import { Ijob } from '../models/experience'
+import { Component, OnInit } from '@angular/core';
+import { ExperienceService } from '../services/experience.service';
+import { Ijob } from '../models/experience';
 
 @Component({
   selector: 'app-company',
@@ -10,16 +9,20 @@ import { Ijob } from '../models/experience'
 })
 export class CompanyComponent implements OnInit {
   /* VARS */
-  jobs: Array<Ijob>
+  jobs: Array<Ijob>;
   /* VARS */
 
-  constructor(private xServices: ExperienceService) {}
+  constructor(private xService: ExperienceService) {}
 
   ngOnInit() {
-    this.loadExperience()
+    this.loadExperience();
   }
 
   async loadExperience() {
-    this.jobs = await this.xServices.getExperiencies()
+    this.jobs = await this.xService.getExperiencies();
+  }
+
+  getEndDate(dateEnd) {
+    return dateEnd || new Date();
   }
 }

@@ -4,28 +4,25 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { HomeComponent } from './home.component';
 import { CardComponent } from '../card/card.component';
 
-
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        HomeComponent,
-        CardComponent
-      ],
-      imports: [
-        RouterTestingModule
-      ],
-    })
-    .compileComponents();
+      declarations: [HomeComponent, CardComponent],
+      imports: [RouterTestingModule]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+  });
+
+  afterEach(() => {
+    fixture.destroy();
   });
 
   it('should create', () => {

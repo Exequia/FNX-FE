@@ -1,20 +1,19 @@
 <div class="row text-center mb-4">
   <div class="col">
     <a class="btn btn-outline-secondary btn-lg text-capitalize" routerLink="company" routerLinkActive="active" role="button">
-      {{tags.companies}}
+      {{ 'experience.home.companies' | translate}}
     </a>
   </div>
   <div class="col">
     <a class="btn btn-outline-secondary btn-lg text-capitalize" routerLink="skills" routerLinkActive="active" role="button">
-      {{tags.skills}}
+      {{ 'experience.home.skills' | translate}}
     </a>
   </div>
   <div class="col">
     <a class="btn btn-outline-secondary btn-lg text-capitalize" routerLink="domain" routerLinkActive="active" role="button">
-      {{tags.domain}}
+      {{ 'experience.home.domain' | translate}}
     </a>
   </div>
 </div>
-
 
 <router-outlet></router-outlet>

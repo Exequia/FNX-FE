@@ -5,7 +5,7 @@ import { UsersService } from './users.service';
 import { UsersServiceMock } from './users.service.mock';
 
 describe('UsersService', () => {
-  let usersServiceMock:  Partial<UsersService>;
+  let usersServiceMock: Partial<UsersService>;
   let usersServiceLoginSpy: Spy;
   let usersServiceLogoutSpy: Spy;
 
@@ -17,7 +17,7 @@ describe('UsersService', () => {
     TestBed.configureTestingModule({
       providers: [
         // UsersService
-        {provide: UsersService, useValue: usersServiceMock},
+        { provide: UsersService, useValue: usersServiceMock }
       ]
     });
   });
@@ -26,12 +26,17 @@ describe('UsersService', () => {
     expect(service).toBeTruthy();
   }));
 
-  it('logout should be undefined', inject([UsersService], (service: UsersService) => {
-    expect(service.logout()).toBeUndefined();
-  }));
+  it('logout should be undefined', inject(
+    [UsersService],
+    (service: UsersService) => {
+      expect(service.logout()).toBeUndefined();
+    }
+  ));
 
-
-  it('login should be success', inject([UsersService], (service: UsersService) => {
-    expect(service.login('fnx','fnx')).toBeUndefined();
-  }));
+  it('login should be success', inject(
+    [UsersService],
+    (service: UsersService) => {
+      expect(service.login('fnx', 'fnx')).toBeUndefined();
+    }
+  ));
 });

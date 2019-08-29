@@ -1,12 +1,30 @@
 [
   {
+    "id": 9,
+    "company": "DXC Technology",
+    "companyURL": "https://www.dxc.technology/",
+    "customer": "Banc Sabadell",
+    "customerURL": "https://www.bancsabadell.com/cs/Satellite/SabAtl/",
+    "dateInit": "2019-08-26T00:00:00.000Z",
+    "dateEnd": null,
+    "role": "team lead",
+    "description": "Jefe de equipo técnico Front End. Migración de frontal con JSP a aplicación distribuida basada Angular. Metodologías SCRUM y Kanban. Repositorio GIT",
+    "skills": [
+      {
+        "id": 5,
+        "name": "angular",
+        "time": 2592000,
+        "domain": "Master"
+      }]
+  },
+  {
     "id": 8,
     "company": "Antares Sistemas",
     "companyURL": "https://atos.net/es/spain",
     "customer": "Antares Sistemas",
     "customerURL": "https://atos.net/es/spain",
-    "dateInit": "2019-09-31T00:00:00.000Z",
-    "dateEnd": "2019-12-31T00:00:00.000Z",
+    "dateInit": "2019-02-11T00:00:00.000Z",
+    "dateEnd": "2019-08-10T00:00:00.000Z",
     "role": "team lead",
     "description": "Jefe de equipo y desarrollador como Full Stack. Front End con VueJs y Servicios Rest con .Net Core. Azure Devops para CI/CD. SQL server y metodologías SCRUM y Kanban. Repositorio GIT",
     "skills": []
@@ -108,13 +126,13 @@
     "skills": [
       {
         "id": 0,
-        "skill": "java",
+        "name": "java",
         "time": 2592000,
         "domain": "Master"
       },
       {
         "id": 1,
-        "skill": "java",
+        "name": "java",
         "time": 2592000,
         "domain": "Master"
       }

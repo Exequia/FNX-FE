@@ -4,9 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-    { 
+    {
       // pathMatch: 'full',
-      path: 'studies', 
+      path: 'studies',
       component: HomeComponent,
       // children: [
       //   {
