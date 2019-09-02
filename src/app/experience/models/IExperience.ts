@@ -8,13 +8,13 @@ export interface Ijob {
   dateEnd: Date;
   role: string;
   description: string;
-  skills: Array<ISkillExpirience>;
+  skills: ISkillExpirience[];
 }
 
 export interface ISkillExpirience {
   id: number;
   skill: ISkill;
-  expiriencies?: Array<ItimeExpirience>;
+  expiriencies?: ItimeExpirience[];
   time: number;
   domain: Domain;
 }

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 0,
+    "name": "CFGS Aplicaciones Multi Plataforma",
+    "center": "I.E.S. Sabadell",
+    "dateInit": "2013",
+    "dateEnd": "2015",
+    "qualify": "9.22",
+    "comments": "Matrícula de honor",
+    "link": ""
+  },
+  {
+    "id": 1,
+    "name": "CFGS Administración y finanzas",
+    "center": "I.E.S. Badía",
+    "dateInit": "1995",
+    "dateEnd": "1997",
+    "qualify": "8.72",
+    "comments": "Matrícula de honor",
+    "link": ""
+  },
+  {
+    "id": 2,
+    "name": "Bachillerato",
+    "center": "I.E.S. La Romànica",
+    "dateInit": "1992",
+    "dateEnd": "1995",
+    "qualify": "",
+    "comments": "Especialidad humanística económica",
+    "link": null
+  },
+  {
+    "id": 3,
+    "name": "Enseñanza secundaria obligatoria",
+    "center": "I.E.S. La Romànica",
+    "dateInit": "1990",
+    "dateEnd": "1992",
+    "qualify": "",
+    "comments": "Especialidad humanística económica",
+    "link": null
+  },
+  {
+    "id": 4,
+    "name": "Enseñanza general básica",
+    "center": "Escuela Pau Picasso",
+    "dateInit": "1985",
+    "dateEnd": "1990",
+    "qualify": "",
+    "comments": "",
+    "link": null
+  }
+]

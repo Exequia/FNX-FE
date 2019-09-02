@@ -5,7 +5,7 @@ import { Imessage } from '../models/messages';
   providedIn: 'root'
 })
 export class MessageService {
-  messages: Array<Imessage> = [];
+  messages: Imessage[] = [];
 
   constructor() {}
 

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ExperienceService } from '../services/experience.service';
-import { Ijob } from '../models/experience';
+import { Ijob } from '../models/IExperience';
 
 @Component({
   selector: 'app-company',
   templateUrl: './company.component.html',
-  styleUrls: ['./company.component.css'],
+  styleUrls: ['./company.component.css']
 })
 export class CompanyComponent implements OnInit {
   /* VARS */
-  jobs: Array<Ijob>;
+  jobs: Ijob[];
   /* VARS */
 
   constructor(private xService: ExperienceService) {}

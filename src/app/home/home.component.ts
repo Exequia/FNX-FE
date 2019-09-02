@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   // VARS
   tags: any = {};
   emailData: any = {};
-  arrCards: Array<Icard> = [];
+  arrCards: Icard[] = [];
   targetCard: Icard;
 
   constructor() {}

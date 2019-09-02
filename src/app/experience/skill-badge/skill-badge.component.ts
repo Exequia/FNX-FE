@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ISkill } from '../models/experience';
+import { ISkill } from '../models/IExperience';
 
 @Component({
   selector: 'app-skill-badge',

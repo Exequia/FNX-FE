@@ -1,0 +1,18 @@
+[
+  {
+    "id": 0,
+    "name": "Amazon Web Services",
+    "center": "Autoformación, Tutorial youtube",
+    "dateInit": "2019",
+    "dateEnd": "2019",
+    "comments": "Gestión de los principales servicios de la plataforma como EC2, S3, RDS, KMS, etc."
+  },
+  {
+    "id": 1,
+    "name": "Java 11",
+    "center": "Autoformación, Tutorial youtube",
+    "dateInit": "2019",
+    "dateEnd": "2019",
+    "comments": "Revisión de los principales cambios con las versiones anteriores. Clase String, Optional, Files, etc."
+  }
+]

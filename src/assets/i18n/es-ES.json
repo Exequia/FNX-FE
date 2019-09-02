@@ -1,30 +1,36 @@
 {
-    "app": {
-        "initApp": "inicio de la aplicación",
-        "home": "inicio",
-        "email": "email",
-        "pass": "contraseña",
-        "logIn": "iniciar sessión",
-        "logOut": "cerrar sessión",
-        "wellcome": "bienvenido",
-        "invalidRequired": "es necesario informar el campo",
-        "invalidMail": "el formato del email introducido no es correcto",
-        "mailInvalid": "el mail introducido no es válido",
-        "passInvalid": "la contraseña introducida no es válida",
-        "experience": "experiencia",
-        "studies": "estudios",
-        "professional": "profesional",
-        "downloadCV": "descargar CV",
-        "github": "github"
+  "app": {
+    "initApp": "inicio de la aplicación",
+    "home": "inicio",
+    "email": "email",
+    "pass": "contraseña",
+    "logIn": "iniciar sessión",
+    "logOut": "cerrar sessión",
+    "wellcome": "bienvenido",
+    "invalidRequired": "es necesario informar el campo",
+    "invalidMail": "el formato del email introducido no es correcto",
+    "mailInvalid": "el mail introducido no es válido",
+    "passInvalid": "la contraseña introducida no es válida",
+    "experience": "experiencia",
+    "studies": "estudios",
+    "professional": "profesional",
+    "downloadCV": "descargar CV",
+    "github": "github"
+  },
+  "experience": {
+    "home": {
+      "companies": "compañías",
+      "skills": "habilidades",
+      "domain": "dominio"
     },
-    "experience": {
-        "home": {
-            "companies": "compañías",
-            "skills": "habilidades",
-            "domain": "dominio"
-        },
-        "company": {
-            "role": "como {{role}} en"
-        }
+    "company": {
+      "role": "como {{role}} en"
     }
+  },
+  "studies": {
+    "home": {
+      "regular": "Regular",
+      "other": "Otra"
+    }
+  }
 }

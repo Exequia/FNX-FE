@@ -1,3 +1,24 @@
-<p>
-  home works!
-</p>
+<div class="row text-center mb-4">
+  <div class="col">
+    <a
+      class="btn btn-outline-secondary btn-lg text-capitalize"
+      routerLink="regular"
+      routerLinkActive="active"
+      role="button"
+    >
+      {{ 'studies.home.regular' | translate }}
+    </a>
+  </div>
+  <div class="col">
+    <a
+      class="btn btn-outline-secondary btn-lg text-capitalize"
+      routerLink="other"
+      routerLinkActive="active"
+      role="button"
+    >
+      {{ 'studies.home.other' | translate }}
+    </a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

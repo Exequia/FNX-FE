@@ -7,12 +7,14 @@
         [ngClass]="odd ? 'right' : 'left'"
       >
         <div class="content">
-          <h3>{{ job.dateInit | date: 'MMM-yyyy' }} - {{ getEndDate(job.dateEnd) | date: 'MMM-yyyy' }}</h3>
+          <h3>
+            {{ job.dateInit | date: 'MMM-yyyy' }} -
+            {{ getEndDate(job.dateEnd) | date: 'MMM-yyyy' }}
+          </h3>
           <h4 class="text-capitalize">
-              {{ 'experience.company.role' | translate:{'role':job.role} }}
+            {{ 'experience.company.role' | translate: { role: job.role } }}
             <a
               [href]="job.companyURL"
-              [title]="job.company + ' website'"
               [title]="job.company + ' website'"
               target="_blank"
               >{{ job.company }}</a
@@ -22,7 +24,8 @@
             {{ job.description }}
           </p>
           <p>
-            <app-skill-badge *ngFor="let skill of job.skills" [skill]="skill"> </app-skill-badge>
+            <app-skill-badge *ngFor="let skill of job.skills" [skill]="skill">
+            </app-skill-badge>
           </p>
         </div>
       </div>

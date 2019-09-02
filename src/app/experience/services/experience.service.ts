@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { FilesService } from '../../services/files/files.service';
-import { Ijob } from '../models/experience';
+import { Ijob } from '../models/IExperience';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExperienceService {
-  jobExperiencies: Array<Ijob>;
+  jobExperiencies: Ijob[];
 
   constructor(private fileService: FilesService) {}
 
@@ -14,9 +14,9 @@ export class ExperienceService {
     return this.fileService.readFile('./assets/files/jobExperiencies.json');
   }
 
-  async getExperiencies(): Promise<Array<Ijob>> {
+  async getExperiencies(): Promise<Ijob[]> {
     if (!this.jobExperiencies) {
-      this.jobExperiencies = <Array<Ijob>>(
+      this.jobExperiencies = <Ijob[]>(
         await this.readJobExperiencies().toPromise()
       );
     }
