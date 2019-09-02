@@ -12,25 +12,12 @@ import { error } from 'util';
 export class StudiesResolver implements Resolve<Observable<ICourse[]>> {
   constructor(private router: Router, private fileService: FilesService) {}
 
-  // resolve(route: ActivatedRouteSnapshot) {
-  //   const filePath = route.data['filePath'];
-  //   const studies = Promise.resolve(
-  //     this.fileService.readFile(filePath).toPromise()
-  //   );
-  //   return of(studies);
-  // }
-
-  // resolve(route: ActivatedRouteSnapshot) {
-  //   const filePath = route.data['filePath'];
-  //   const studies = this.getStudiesFile(filePath);
-  //   return of(studies);
-  // }
-
   resolve(route: ActivatedRouteSnapshot): Observable<ICourse[]> {
     const filePath = route.data['filePath'];
     const studies = this.getStudiesFile(filePath);
     return studies;
 
+    /// TODO -> Manage file errors
     // return this.getStudiesFile(filePath).pipe(error => {
     //   // this.router.navigate(['/404']);
     //   this.router.navigate(['/']);

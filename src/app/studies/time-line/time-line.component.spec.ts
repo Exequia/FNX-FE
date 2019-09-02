@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { RouterTestingModule } from '@angular/router/testing';
+
 import { TimeLineComponent } from './time-line.component';
 
 describe('TimeLineComponent', () => {
@@ -8,9 +10,9 @@ describe('TimeLineComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimeLineComponent ]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule],
+      declarations: [TimeLineComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
