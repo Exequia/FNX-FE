@@ -1,9 +1,14 @@
 <div *ngIf="messageService.messages.length">
-  <div class="alert" [ngClass]="'alert-' + message.type" role="alert" *ngFor='let message of messageService.messages; index as i'>
+  <div
+    class="alert"
+    [ngClass]="'alert-' + message.type"
+    role="alert"
+    *ngFor="let message of messageService.messages; index as i"
+  >
     <div class="row">
       <div class="col">
-        <h2>{{message.title}}</h2>
-        <span *ngIf="message.text">{{message.text}}</span>
+        <h2>{{ message.title }}</h2>
+        <span *ngIf="message.text">{{ message.text }}</span>
       </div>
 
       <div class="col-1 btn text-right" (click)="closeMsg(i)">

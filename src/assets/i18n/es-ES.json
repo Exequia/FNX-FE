@@ -17,6 +17,15 @@
     "downloadCV": "descargar CV",
     "github": "github"
   },
+  "home": {
+    "albertReal": "alberto real",
+    "intro": "En esta página encontrarás información profesional sobre mí y los diferentes proyectos personales que voy realizando y publicando",
+    "moreInfo": "Si quieres más información, puedes enviar un mail a",
+    "contactMail": "real.estepa@gmail.com",
+    "contactMailSubject": "Contacto%20a%20través%20de%20la%20web",
+    "nextTarget": "próximo objetivo",
+    "lastUpdates": "últimas actualizaciones"
+  },
   "experience": {
     "home": {
       "companies": "compañías",

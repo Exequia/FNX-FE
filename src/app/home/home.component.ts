@@ -8,7 +8,6 @@ import { Icard } from '../card/models/card';
 })
 export class HomeComponent implements OnInit {
   // VARS
-  tags: any = {};
   emailData: any = {};
   arrCards: Icard[] = [];
   targetCard: Icard;
@@ -16,15 +15,6 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    this.tags.albertReal = 'alberto real';
-    this.tags.intro =
-      'En esta página encontrarás información profesional sobre mí y los diferentes proyectos personales que voy realizando y publicando';
-    this.tags.moreInfo = 'Si quieres más información, puedes enviar un mail a';
-    this.tags.contactMail = 'real.estepa@gmail.com';
-    this.tags.contactMailSubject = 'Contacto%20a%20través%20de%20la%20web';
-    this.tags.nextTarget = 'próximo objetivo';
-    this.tags.lastUpdates = 'últimas actualizaciones';
-
     this.emailData.address = 'real.estepa@gmail.com';
     this.emailData.subject = 'Contacto%20a%20través%20de%20la%20web';
 
@@ -45,7 +35,8 @@ export class HomeComponent implements OnInit {
       title: 'Inauguración web',
       date: new Date(),
       body:
-        'Se actualiza la página y se inagura con nuevas tecnologías destacando Angular 6 en el FrontEnd e Spring Microservices en Back End'
+        'Se actualiza la página y se inagura con nuevas tecnologías destacando' +
+        ' Angular 6 en el FrontEnd y Microservices con Java 11  y springboot en el Back End'
     };
     this.arrCards.push(card);
   }

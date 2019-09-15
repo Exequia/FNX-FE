@@ -1,29 +1,32 @@
 <div class="jumbotron pb-3">
   <div class="container">
-    <h1 class="display-3 text-capitalize">{{tags.albertReal}}</h1>
+    <h1 class="display-3 text-capitalize">
+      {{ 'home.albertReal' | translate }}
+    </h1>
+    <p>{{ 'home.intro' | translate }}.</p>
     <p>
-      {{tags.intro}}.
+      {{ 'home.moreInfo' | translate }}:
+      <a
+        href="mailto:{{ 'home.contactMail' | translate }}?Subject={{
+          'home.contactMailSubject' | translate
+        }}"
+        target="_top"
+        >{{ 'home.contactMail' | translate }}</a
+      >
     </p>
-    <p>
-      {{tags.moreInfo}}: <a href="mailto:{{tags.contactMail}}?Subject={{tags.contactMailSubject}}" target="_top">{{tags.contactMail}}</a>
-    </p>
-  </div> <!-- /container -->
+  </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col" *ngIf="targetCard">
-      <h2 class="text-capitalize">{{tags.nextTarget}}</h2>
-      <app-card
-        [card]="targetCard">
-      </app-card>
+      <h2 class="text-capitalize">{{ 'home.nextTarget' | translate }}</h2>
+      <app-card [card]="targetCard"> </app-card>
     </div>
 
     <div class="col" *ngFor="let card of arrCards">
-      <h2 class="text-capitalize">{{tags.lastUpdates}}</h2>
-      <app-card
-        [card]="card">
-      </app-card>
+      <h2 class="text-capitalize">{{ 'home.lastUpdates' | translate }}</h2>
+      <app-card [card]="card"> </app-card>
     </div>
   </div>
-</div> <!-- /container -->
+</div>
